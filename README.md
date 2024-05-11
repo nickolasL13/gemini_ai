@@ -2,6 +2,10 @@
 ##### OBS: A maior parte desse READ.ME foi gerado com Gemini IA
 ##### OBS: Para instalar o gemini utilize o comando '''pip install -q -U google-generativeai'''
 ##### OBS: É necessário configurar a API_KEY no .env para que o código funcione!
+##### OBS: Caso não possua chave do gemini, pode usar a minha, porém pode ser que a quota diária se esgote caso todos usem, portanto caso você tenha uma por favor use kkk. Minha chave: AIzaSyBUCl0StEEv2mTXmqwjb7oPpaLsNDJW-Dw
+##### OBS: Os documentos utilizados serão os documentos da pasta ./docs. Coloquei um documento lá para que a pasta aparecesse aqui no git.
+##### OBS: Alguns parâmetros em código podem ser modificados a vontade, como por exemplo o tamanho do split dos documentos, fica a seu critério :)
+##### OBS: Se eu esqueci de falar algo importante me perdoe. Por favor avise para que eu possa explicar ou corrigir algo que esteja faltando :)
 ## Projeto Alura com Google
 
 **Descrição do projeto:**
@@ -50,13 +54,6 @@ Este projeto tem como objetivo a criação de um chatbot capaz de responder a pe
 * Este é apenas um exemplo de uso do chatbot. Você pode personalizar o chatbot e interagir com ele de acordo com suas necessidades.
 * O chatbot ainda está em desenvolvimento e pode apresentar falhas ou limitações.
 * É importante fornecer prompts claros e concisos para que o chatbot possa entender suas perguntas e fornecer respostas precisas.
-
-**Questões Importantes** (Nickolas Aqui)
-
-- Os documentos utilizados serão os documentos da pasta ./docs. Coloquei um documento lá para que a pasta aparecesse aqui no git.
-- Alguns parâmetros podem ser modificados a vontade, fica a seu critério :)
-- Lembre de configurar a sua própria API KEY no .env do projetoz
-- Se eu esqueci de falar algo importante me perdoe. Se esse for o caso por favor avise para que eu possa explicar ou corrigir ;)
 
 **Técnica RAG**
 
