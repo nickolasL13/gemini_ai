@@ -1,3 +1,4 @@
+##### OBS: Esse READ.ME foi gerado com GeminiIA
 ## Leia-me
 
 **Descrição do projeto:**
