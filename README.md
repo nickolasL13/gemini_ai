@@ -1,5 +1,5 @@
-##### OBS: Esse READ.ME foi gerado com GeminiIA
-## Leia-me
+##### OBS: A maior parte desse READ.ME foi gerado com GeminiIA
+## Projeto Alura com Google
 
 **Descrição do projeto:**
 
@@ -32,35 +32,15 @@ Este projeto tem como objetivo a criação de um chatbot capaz de responder a pe
 
 **Personalização:**
 
-```
-O que sua IA? R: Chatbot
-Qual será o nome da sua IA? R: Bard
-Qual o objetivo da sua IA? R: Auxiliar os usuários com informações e respostas a perguntas.
-Qual é a personalidade da sua IA? R: Amigável, educada e informativa.
-De qual maneira a sua IA responde as perguntas? R: De forma completa e abrangente, utilizando linguagem natural e exemplos quando possível.
-```
+![image](https://github.com/nickolasL13/gemini_ai/assets/76066959/1c10ba41-28e1-46b5-ba95-e255a59aa069)
 
 **Treinamento com documentos:**
 
-```
-Você quer utilizar documentos para criar sua IA? Responda 1 para sim e 0 para não. R: 1
-
-Suas respostas devem ser restritas aos documentos ou os documentos servirão como apoio a sua IA? Responda 1 para restrita e 0 para apoio. R: 0
-```
+![image](https://github.com/nickolasL13/gemini_ai/assets/76066959/d094f306-299d-4e9e-a4bd-03e48060ad72)
 
 **Interação com o chatbot:**
 
-```
-Esperando o prompt: Qual o clima em São Paulo hoje?
-
-Resposta: O clima em São Paulo hoje está ensolarado, com temperatura máxima de 28°C e mínima de 18°C.
-
-Esperando o prompt: Qual o significado da vida?
-
-Resposta: O significado da vida é um tema complexo que tem sido debatido por filósofos e pensadores há séculos. Não existe uma resposta única que satisfaça a todos, pois cada indivíduo possui sua própria perspectiva e crenças. No entanto, algumas possíveis respostas para a pergunta sobre o significado da vida incluem encontrar a felicidade, fazer a diferença no mundo e se conectar com algo maior do que si mesmo.
-
-Esperando o prompt: fim
-```
+![image](https://github.com/nickolasL13/gemini_ai/assets/76066959/9dc3a981-d2e9-4404-ab05-07c126dc983f)
 
 **Observações:**
 
@@ -68,14 +48,19 @@ Esperando o prompt: fim
 * O chatbot ainda está em desenvolvimento e pode apresentar falhas ou limitações.
 * É importante fornecer prompts claros e concisos para que o chatbot possa entender suas perguntas e fornecer respostas precisas.
 
-**Contribuindo:**
+**Questões Importantes** (Nickolas Aqui)
 
-Se você deseja contribuir para este projeto, entre em contato com os desenvolvedores.
+- Os documentos utilizados serão os documentos da pasta ./docs. Coloquei um documento lá para que a pasta aparecesse aqui no git.
+- Alguns parâmetros podem ser modificados a vontade, fica a seu critério :)
+- Se eu esqueci de falar algo importante me perdoe. Se esse for o caso por favor avise para que eu possa explicar ou corrigir ;)
 
-**Licença:**
+**Técnica RAG**
 
-Este projeto está licenciado sob a licença [nome da licença]. Consulte o arquivo LICENSE para mais informações.
+A técnica RAG funciona de maneira simples.
+Em poucas palavras, seu conceito é de utilizar uma fonte de informação externa ao modelo para que ela sirva de apoio ou como fonte de informação principal.
+Segue-se os seguintes passos:
+1. Ao se fazer um prompt, será feito com ele uma busca no documento com o objetivo de encontrar onde a informação do prompt bate com a informação do documento, retornando assim o trecho que contém seu conteúdo mais próximo ao prompt. (Aqui entra a parte de indexação do documento, embeddings e tals)
+2. Após essa fase, passa-se esse trecho para que a LLM trabalhe em cima para gerar um texto mais requintado.
+3. Por fim, junta-se esse texto requintado como contexto junto ao prompt em uma query para o ChatBot que deverá responder a pergunta baseado no contexto fornecido.
 
-**Informações de contato:**
-
-Se você tiver alguma dúvida ou comentário sobre este projeto, entre em contato com os desenvolvedores em [endereço de e-mail ou nome do GitHub].
+   ![image](https://github.com/nickolasL13/gemini_ai/assets/76066959/fc6cf7ad-724e-40ba-88c8-2e9bf8d287aa)
