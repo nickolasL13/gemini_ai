@@ -19,10 +19,31 @@
 
 import google.generativeai as genai
 from dotenv import load_dotenv
+import pandas as pd 
+import numpy as np
+import PyPDF2
 import os
 
 load_dotenv()
 genai.configure(api_key=os.environ.get("API_KEY"))
+model = 'models/embedding-001'
+
+def extract_text_from_pdf(pdf_file):
+    with open(pdf_file, 'rb') as pdf:
+        reader = PyPDF2.PdfReader(pdf, strict=False)
+        pdf_text = ''
+
+        for page in reader.pages:
+            content = page.extract_text()
+            pdf_text += content
+        
+        return pdf_text
+
+def embed_fn(title, text):
+  return genai.embed_content(model=model,
+                             content=text,
+                             task_type="retrieval_document",
+                             title=title)["embedding"]
 
 generation_config = {
     'candidate_count': 1,
@@ -50,17 +71,56 @@ objetivo = input('Qual o objetivo da sua IA? R: ')
 personalidade = input('Qual é a personalidade da sua IA? R: ')
 maneira = input('De qual maneira a sua IA responde as perguntas? R: ')
 
-model = genai.GenerativeModel(model_name='gemini-1.5-pro-latest',
-                              generation_config=generation_config,
-                              safety_settings=safety_settings,
-                              system_instruction=system_instruction(being, nome, objetivo, personalidade, maneira)
-                            )
+ans = input('\nVocê quer utilizar documentos para criar sua IA? Responda 1 para sim e 0 para não. R: ')
 
-chat = model.start_chat(history=[])
-prompt = input("Esperando o prompt: ")
+if ans == '1':
+    
+    docs = []
 
-while prompt != 'fim':
-    response = chat.send_message(prompt)
-    print('Resposta: ', response.text, '\n')
+    for doc in os.listdir('./docs'):
+
+        doc_dict = {
+            'title': doc,
+            'content': extract_text_from_pdf(f'./docs/{doc}')
+        }
+
+        docs.append(doc_dict)
+
+    # split_docs = []
+    
+    # for doc in docs:
+    #     split_docs.append(doc.split(maxsplit=int(len(docs)/3000)))
+
+    df = pd.DataFrame(docs)
+    df.columns = ['Title', 'Text']
+
+    df['Embeddings'] = df.apply(lambda row: embed_fn(row['Title'], row['Text']), axis=1)
+    print(df)
+    
+
+    
+    
+
+
+
+
+
+elif ans == '0':
+    
+    model = genai.GenerativeModel(model_name='gemini-1.5-pro-latest',
+                                generation_config=generation_config,
+                                safety_settings=safety_settings,
+                                system_instruction=system_instruction(being, nome, objetivo, personalidade, maneira)
+                                )
+
+    chat = model.start_chat(history=[])
     prompt = input("Esperando o prompt: ")
+
+    while prompt != 'fim':
+        response = chat.send_message(prompt)
+        print('Resposta: ', response.text, '\n')
+        prompt = input("Esperando o prompt: ")
+
+else:
+    print('Top')
 
