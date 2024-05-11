@@ -5,6 +5,7 @@
 ##### OBS: Caso não possua chave do gemini, pode usar a minha, porém pode ser que a quota diária se esgote caso todos usem, portanto caso você tenha uma por favor use kkk. Minha chave: AIzaSyBUCl0StEEv2mTXmqwjb7oPpaLsNDJW-Dw
 ##### OBS: Os documentos utilizados serão os documentos da pasta ./docs. Coloquei um documento lá para que a pasta aparecesse aqui no git.
 ##### OBS: Alguns parâmetros em código podem ser modificados a vontade, como por exemplo o tamanho do split dos documentos, fica a seu critério :)
+##### OBS: Os timers servem para evitar um erro do gemini de frequência de requisição a API, pode dimuir se quiser, mas fica avisado que pode dar algum erro
 ##### OBS: Se eu esqueci de falar algo importante me perdoe. Por favor avise para que eu possa explicar ou corrigir algo que esteja faltando :)
 ## Projeto Alura com Google
 
