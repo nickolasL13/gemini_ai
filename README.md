@@ -6,7 +6,7 @@
 
 **Descrição do projeto:**
 
-Este projeto tem como objetivo a criação de um chatbot capaz de responder a perguntas a partir de prompts programáveis. 
+Este projeto tem como objetivo a criação de um chatbot capaz de responder a perguntas a partir de prompts programáveis, opcionalmente podendo utilizar documentos como fonte de informação externa ao modelo para responder as consultas realizadas pelo usuário.
 
 **Funcionalidades:**
 
