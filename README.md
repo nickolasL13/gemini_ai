@@ -1,5 +1,7 @@
 ### LEMBRE DE INSTALAR AS DEPENDÊNCIAS DO PROJETO EM REQUIREMENTS.TXT
-##### OBS: A maior parte desse READ.ME foi gerado com GeminiIA
+##### OBS: A maior parte desse READ.ME foi gerado com Gemini IA
+##### OBS: Para instalar o gemini utilize o comando '''pip install -q -U google-generativeai'''
+##### OBS: É necessário configurar a API_KEY no .env para que o código funcione!
 ## Projeto Alura com Google
 
 **Descrição do projeto:**
@@ -53,6 +55,7 @@ Este projeto tem como objetivo a criação de um chatbot capaz de responder a pe
 
 - Os documentos utilizados serão os documentos da pasta ./docs. Coloquei um documento lá para que a pasta aparecesse aqui no git.
 - Alguns parâmetros podem ser modificados a vontade, fica a seu critério :)
+- Lembre de configurar a sua própria API KEY no .env do projetoz
 - Se eu esqueci de falar algo importante me perdoe. Se esse for o caso por favor avise para que eu possa explicar ou corrigir ;)
 
 **Técnica RAG**
