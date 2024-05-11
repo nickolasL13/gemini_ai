@@ -1,3 +1,4 @@
+### LEMBRE DE INSTALAR AS DEPENDÊNCIAS DO PROJETO EM REQUIREMENTS.TXT
 ##### OBS: A maior parte desse READ.ME foi gerado com GeminiIA
 ## Projeto Alura com Google
 
