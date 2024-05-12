@@ -2,7 +2,7 @@
 ##### OBS: A maior parte desse READ.ME foi gerado com Gemini IA
 ##### OBS: Para instalar o gemini utilize o comando '''pip install -q -U google-generativeai'''
 ##### OBS: É necessário configurar a API_KEY no .env para que o código funcione!
-##### OBS: Caso não possua chave do gemini, pode usar a minha, porém pode ser que a quota diária se esgote caso todos usem, portanto caso você tenha uma por favor use kkk. Minha chave: AIzaSyBUCl0StEEv2mTXmqwjb7oPpaLsNDJW-Dw
+##### OBS: Caso não possua chave do gemini, pode usar a minha, porém pode ser que a quota diária se esgote caso use, portanto caso você tenha uma por favor use kkk. Minha chave: AIzaSyBUCl0StEEv2mTXmqwjb7oPpaLsNDJW-Dw
 ##### OBS: Os documentos utilizados serão os documentos da pasta ./docs. Coloquei um documento lá para que a pasta aparecesse aqui no git.
 ##### OBS: Alguns parâmetros em código podem ser modificados a vontade, como por exemplo o tamanho do split dos documentos, fica a seu critério :)
 ##### OBS: Os timers servem para evitar um erro do gemini de frequência de requisição a API, pode dimuir se quiser, mas fica avisado que pode dar algum erro
