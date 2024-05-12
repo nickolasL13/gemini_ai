@@ -7,6 +7,8 @@
 ##### OBS: Alguns parâmetros em código podem ser modificados a vontade, como por exemplo o tamanho do split dos documentos, fica a seu critério :)
 ##### OBS: Os timers servem para evitar um erro do gemini de frequência de requisição a API, pode dimuir se quiser, mas fica avisado que pode dar algum erro
 ##### OBS: Se eu esqueci de falar algo importante me perdoe. Por favor avise para que eu possa explicar ou corrigir algo que esteja faltando :)
+##### OBS: Os documentos devem ser passados em formato PDF
+##### OBS: Para rodar o programa, após instalar as dependências, basta rodar o run.sh via linha de comando ou executar "python3 gemini.py"
 ## Projeto Alura com Google
 
 **Descrição do projeto:**
